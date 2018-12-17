@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VEu-qC-QuU" customClass="CircleView" customModule="Gesture" customModuleProvider="target">
+                                <rect key="frame" x="38" y="101" width="300" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="48L-mR-QH8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="T1Y-6X-leq"/>
+                                    <constraint firstAttribute="height" constant="250" id="Z8C-Xa-LE6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="u6z-fF-u4q"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.4346605006" green="0.76879677940000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="1" green="0.23503385144340072" blue="0.19499387639922261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="6il-1K-DaY">
+                                <rect key="frame" x="52" y="574" width="271" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNM-Pt-cnj">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="add"/>
+                                        <connections>
+                                            <action selector="addClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ka-7n-drJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ad-EQ-IzC">
+                                        <rect key="frame" x="110" y="0.0" width="38" height="30"/>
+                                        <state key="normal" title="move"/>
+                                        <connections>
+                                            <action selector="moveClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Za8-3O-kt7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFd-k1-OqX">
+                                        <rect key="frame" x="228" y="0.0" width="43" height="30"/>
+                                        <state key="normal" title="delete"/>
+                                        <connections>
+                                            <action selector="deleteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WPP-WJ-ErQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="椭圆实现了旋转，拖动，缩放等手势" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktm-op-qKw">
+                                <rect key="frame" x="38" y="40" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6il-1K-DaY" secondAttribute="bottom" constant="63" id="7zu-5T-5pS"/>
+                            <constraint firstItem="6il-1K-DaY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Shy-9r-zx5"/>
+                            <constraint firstItem="VEu-qC-QuU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vFJ-Lc-cJG"/>
+                            <constraint firstItem="VEu-qC-QuU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="81" id="zu1-by-PX3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
